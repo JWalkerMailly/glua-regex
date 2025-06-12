@@ -1,5 +1,5 @@
 
-# Regex
+# 🧵 regex
 
 Regular expressions are patterns used to match character combinations in strings. These patterns are used with the Exec(), Test(), Match(), Replace(), Search(), and Split() methods. This module creates an instance of DHTML to process regular expressions using JavaScript and passes the result to a lua callback.
 
