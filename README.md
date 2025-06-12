@@ -7,7 +7,7 @@ Regular expressions are patterns used to match character combinations in strings
 > This module can only be used clientside due to its dependency on DHTML.
 
 > [!CAUTION]
-> This is a very hacky implementation. **Do not** nest regex functions into each other, this will cause Awesomium to panic. If you need to chain regex operations, use a concurrency design pattern approach.
+> This is a very hacky implementation. **Do not** nest regex functions into each other, this will cause Awesomium to panic. If you need to chain regex operations, use a concurrency design pattern approach, ie; a Think hook with guard clauses for each regex stage.
 
 ## Why?
 
