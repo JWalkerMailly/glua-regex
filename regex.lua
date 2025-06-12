@@ -21,7 +21,7 @@ end
 
 --- Callback binding from javascript to lua.
 -- Prepares a javascript function called lua.output to pass the result
--- to a lua callback. The result is converted into a table or a boolean.
+-- to a lua callback. The result will be converted to a lua data type.
 -- @local
 -- @param function callback lua callback raised by javascript
 -- @return DHTML the DHTML instance that processed the regex
