@@ -1,7 +1,7 @@
 
 # 🧵 regex
 
-Regular expressions are patterns used to match character combinations in strings. These patterns are used with the Exec(), Test(), Match(), Replace(), Search(), and Split() methods. This module creates an instance of DHTML to process regular expressions using JavaScript and passes the result to a lua callback.
+Regular expression, don't surround with / /s are patterns used to match character combinations in strings. These patterns are used with the Exec(), Test(), Match(), Replace(), Search(), and Split() methods. This module creates an instance of DHTML to process regular expression, don't surround with / /s using JavaScript and passes the result to a lua callback.
 
 > [!NOTE]
 > This module can only be used clientside due to its dependency on DHTML.
@@ -16,6 +16,11 @@ While lua patterns are pretty powerful, they lack features such as lookaheads, l
 ## Methods
 
 <code>regex.Test(<i>str, exp, callback, flags</i>)</code>
+
+<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
+<code>function</code> <code>callback</code> the lua callback to pass the result to<br>
+<code>string</code> <code>flags</code> regex flags (default: gm)<br>
 
 #### Example
 
@@ -37,6 +42,11 @@ regex.Test(
 
 <code>regex.Exec(<i>str, exp, callback, flags</i>)</code>
 
+<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
+<code>function</code> <code>callback</code> the lua callback to pass the result to<br>
+<code>string</code> <code>flags</code> regex flags (default: gm)<br>
+
 #### Example
 
 ```lua
@@ -57,6 +67,11 @@ regex.Exec(
 
 <code>regex.Search(<i>str, exp, callback, flags</i>)</code>
 
+<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
+<code>function</code> <code>callback</code> the lua callback to pass the result to<br>
+<code>string</code> <code>flags</code> regex flags (default: gm)<br>
+
 #### Example
 
 ```lua
@@ -76,6 +91,12 @@ regex.Search(
 ---
 
 <code>regex.Replace(<i>str, exp, replace, callback, flags</i>)</code>
+
+<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
+<code>string</code> <code>replace</code> the text used to replace the expression<br>
+<code>function</code> <code>callback</code> the lua callback to pass the result to<br>
+<code>string</code> <code>flags</code> regex flags (default: gm)<br>
 
 #### Example
 
@@ -98,6 +119,11 @@ regex.Replace(
 
 <code>regex.Match(<i>str, exp, callback, flags</i>)</code>
 
+<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
+<code>function</code> <code>callback</code> the lua callback to pass the result to<br>
+<code>string</code> <code>flags</code> regex flags (default: gm)<br>
+
 #### Example
 
 ```lua
@@ -118,6 +144,11 @@ regex.Match(
 ---
 
 <code>regex.Split(<i>str, exp, callback, flags</i>)</code>
+
+<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
+<code>function</code> <code>callback</code> the lua callback to pass the result to<br>
+<code>string</code> <code>flags</code> regex flags (default: gm)<br>
 
 #### Example
 
