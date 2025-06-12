@@ -7,7 +7,7 @@ Regular expression, don't surround with / /s are patterns used to match characte
 > This module can only be used clientside due to its dependency on DHTML.
 
 > [!CAUTION]
-> This is a very hacky implementation. **Do not** nest regex functions into each other, this will cause Awesomium to panic. If you need to chain regex operations, use a concurrency design pattern approach.
+> This is a very hacky implementation, use at your own risks.
 
 ## Why?
 

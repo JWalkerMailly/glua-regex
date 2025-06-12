@@ -8,35 +8,25 @@ local _env
 
 --- Returns a static DHTML instance.
 -- @local
+-- @param function callback lua callback from js
 -- @return DHTML
-local function GetEnv()
+local function GetEnv(callback)
 
 	if (!IsValid(_env)) then
 		_env = vgui.Create("DHTML")
 		_env:SetAllowLua(true)
+		_env:AddFunction("lua", "output", function(result)
+
+			local output = util.JSONToTable(result) || result
+
+			_env.callback(output)
+		end)
 	end
 
+	-- abusing pass by reference out of scope
+	_env.callback = callback
+
 	return _env
-end
-
---- Callback binding from javascript to lua.
--- Prepares a javascript function called lua.output to pass the result
--- to a lua callback. The result will be converted to a lua data type.
--- @local
--- @param function callback lua callback raised by javascript
--- @return DHTML the DHTML instance that processed the regex
-local function Prepare(callback)
-
-	local env = GetEnv()
-
-	env:AddFunction("lua", "output", function(result)
-
-		local output = util.JSONToTable(result) || result
-
-		callback(output)
-	end)
-
-	return env
 end
 
 --- Javascript boilerplate for regex to lua.
@@ -82,7 +72,7 @@ end
 -- @param vararg ...
 local function Run(code, str, exp, callback, flags, ...)
 
-	local env = Prepare(callback)
+	local env = GetEnv(callback)
 	local js  = Boilerplate(code, str, exp, flags, ...)
 
 	env:RunJavascript(js)
