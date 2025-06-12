@@ -17,7 +17,7 @@ While lua patterns are pretty powerful, they lack features such as lookaheads, l
 
 <code>regex.Test(<i>str, exp, callback, flags</i>)</code>
 
-<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>str</code> input string<br>
 <code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
 <code>function</code> <code>callback</code> the lua callback to pass the result to<br>
 <code>string</code> <code>flags</code> regex flags (default: gm)<br>
@@ -42,7 +42,7 @@ regex.Test(
 
 <code>regex.Exec(<i>str, exp, callback, flags</i>)</code>
 
-<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>str</code> input string<br>
 <code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
 <code>function</code> <code>callback</code> the lua callback to pass the result to<br>
 <code>string</code> <code>flags</code> regex flags (default: gm)<br>
@@ -67,7 +67,7 @@ regex.Exec(
 
 <code>regex.Search(<i>str, exp, callback, flags</i>)</code>
 
-<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>str</code> input string<br>
 <code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
 <code>function</code> <code>callback</code> the lua callback to pass the result to<br>
 <code>string</code> <code>flags</code> regex flags (default: gm)<br>
@@ -92,7 +92,7 @@ regex.Search(
 
 <code>regex.Replace(<i>str, exp, replace, callback, flags</i>)</code>
 
-<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>str</code> input string<br>
 <code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
 <code>string</code> <code>replace</code> the text used to replace the expression<br>
 <code>function</code> <code>callback</code> the lua callback to pass the result to<br>
@@ -119,7 +119,7 @@ regex.Replace(
 
 <code>regex.Match(<i>str, exp, callback, flags</i>)</code>
 
-<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>str</code> input string<br>
 <code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
 <code>function</code> <code>callback</code> the lua callback to pass the result to<br>
 <code>string</code> <code>flags</code> regex flags (default: gm)<br>
@@ -145,7 +145,7 @@ regex.Match(
 
 <code>regex.Split(<i>str, exp, callback, flags</i>)</code>
 
-<code>string</code> <code>str</code> regex input string<br>
+<code>string</code> <code>str</code> input string<br>
 <code>string</code> <code>exp</code> regular expression, don't surround with / /<br>
 <code>function</code> <code>callback</code> the lua callback to pass the result to<br>
 <code>string</code> <code>flags</code> regex flags (default: gm)<br>
