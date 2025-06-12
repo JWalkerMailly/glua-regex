@@ -9,6 +9,10 @@ Regular expressions are patterns used to match character combinations in strings
 > [!CAUTION]
 > This is a very hacky implementation. **Do not** nest regex functions into each other, this will cause Awesomium to panic. If you need to chain regex operations, use a concurrency design pattern approach.
 
+## Why?
+
+While lua patterns are pretty powerful, they lack features such as lookaheads, lookbehinds, alternations (|), character classes, quantifiers (*, +, ?) to name a few. Named groups, backreferences, atomic groups, lazy/greedy matching, etc.
+
 ## Methods
 
 <code>regex.Test(<i>str, exp, callback, flags</i>)</code>
